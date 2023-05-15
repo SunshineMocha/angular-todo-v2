@@ -14,6 +14,6 @@ export class TodoAddComponent {
   constructor(private dataManagerServ: DataManagerService){}
 
   saveTodo(){
-    this.dataManagerServ.emit({...this.newTodo});
+    this.dataManagerServ.addTodo({...this.newTodo});
   }
 }
