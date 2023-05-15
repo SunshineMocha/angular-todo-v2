@@ -1,0 +1,11 @@
+<!-- <li>
+  <h3>{{todoDetail?.title}}</h3>
+  <span>{{todoDetail?.description}}</span>
+</li> -->
+<!--  OPPURE  -->
+<li *ngIf="todoDetail" class="priority{{todoDetail.priority}}">
+  <!-- cosí assegnamo la classe in base al valore della priority -->
+  <h3>{{todoDetail.title}}</h3>
+  <span>{{todoDetail.description}}</span>
+  <button (click)="deleteTodo()">Delete</button>
+</li>

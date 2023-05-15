@@ -1,0 +1,14 @@
+<div>
+  <label for="input-title">Insert Title</label>
+  <input id="input-title" type="text" [(ngModel)]="newTodo.title">
+  <!-- for di label deve essere id di input -->
+</div>
+<div>
+  <label for="input-description">Insert Description</label>
+  <input id="input-description" type="text" [(ngModel)]="newTodo.description">
+</div>
+<div>
+  <label for="input-priority">Insert Priority</label>
+  <input id="input-priority" type="number" [(ngModel)]="newTodo.priority">
+</div>
+<button (click)="saveTodo()">Add/Save</button>

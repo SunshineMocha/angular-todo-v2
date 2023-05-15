@@ -1,0 +1,10 @@
+<ul>
+  <!-- <li *ngFor="let todo of todoArray">
+    {{todo.title}}
+  </li> -->
+  <app-todo-detail
+  *ngFor="let todo of todoArray"
+  [todoDetail]="todo"</app-todo-detail>
+  <!-- input si vede con quadre, output si vede con tonde,
+  $event vuol dire come parametro metti quello che arriva dall'evento todoDeleted -->
+</ul>
