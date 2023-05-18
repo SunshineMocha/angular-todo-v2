@@ -1,8 +1,8 @@
-<div>
+<!-- <div>
   <label for="input-title">Insert Title</label>
-  <input id="input-title" type="text" [(ngModel)]="newTodo.title">
+  <input id="input-title" type="text" [(ngModel)]="newTodo.title"> -->
   <!-- for di label deve essere id di input -->
-</div>
+<!-- </div>
 <div>
   <label for="input-description">Insert Description</label>
   <input id="input-description" type="text" [(ngModel)]="newTodo.description">
@@ -11,4 +11,21 @@
   <label for="input-priority">Insert Priority</label>
   <input id="input-priority" type="number" [(ngModel)]="newTodo.priority">
 </div>
-<button (click)="saveTodo()">Add/Save</button>
+<button (click)="saveTodo()">Add/Save</button> -->
+<!--  <button mat-flat-button (click)="saveTodo()" color="primary">Add/Save</button> -->
+
+<mat-form-field>
+    <mat-label for="input-title">Title</mat-label>
+    <input matInput placeholder="ex. Buy groceries" id="input-title" [(ngModel)]="newTodo.title">
+</mat-form-field>
+<mat-form-field>
+  <mat-label for="input-description">Description</mat-label>
+  <input matInput placeholder="ex. Go to the groceries shop" id="input-description" [(ngModel)]="newTodo.description">
+</mat-form-field>
+<mat-form-field>
+  <mat-label for="input-priority">Priority</mat-label>
+  <input matInput placeholder="ex. 1" type=number id="input-priority" [(ngModel)]="newTodo.priority">
+</mat-form-field>
+<mat-card-actions>
+<button mat-flat-button (click)="saveTodo()" color="primary">Add/Save</button>
+</mat-card-actions>
