@@ -3,9 +3,21 @@
   <span>{{todoDetail?.description}}</span>
 </li> -->
 <!--  OPPURE  -->
-<li *ngIf="todoDetail" class="priority{{todoDetail.priority}}">
+<!-- <li *ngIf="todoDetail" class="priority{{todoDetail.priority}}"> -->
   <!-- cosí assegnamo la classe in base al valore della priority -->
-  <h3>{{todoDetail.title}}</h3>
-  <span>{{todoDetail.description}}</span>
-  <button (click)="deleteTodo()">Delete</button>
-</li>
+  <!-- <h3>{{todoDetail.title}}</h3> -->
+  <!-- <span>{{todoDetail.description}}</span> -->
+  <!-- <button (click)="deleteTodo()">Delete</button> -->
+<!-- </li> -->
+
+<!-- <li *ngIf="todoDetail" class="priority{{todoDetail.priority}}"></li> -->
+  <mat-card *ngIf="todoDetail" class="priority{{todoDetail.priority}}">
+    <mat-card-header>
+      <mat-card-title>{{todoDetail.title}}</mat-card-title>
+      <mat-card-subtitle>{{todoDetail.description}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions align="end">
+      <button mat-button (click)="deleteTodo()">Delete</button>
+    </mat-card-actions>
+  </mat-card>
+<!--  </li> -->
