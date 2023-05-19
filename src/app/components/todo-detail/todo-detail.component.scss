@@ -1,14 +1,17 @@
 .priority1{
-  border: 5px solid green;;
+  border-left: 8px solid green;;
 }
 .priority2{
-  border: 5px solid orange;
+  border-left: 8px solid orange;
 }
 .priority3{
-  border: 5px solid red;
+  border-left: 8px solid red;
 }
 .example-form {
   min-width: 150px;
   max-width: 500px;
   width: 100%;
+}
+.todo-card{
+  margin: 2px 4px 2px 4px;
 }

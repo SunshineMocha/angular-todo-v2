@@ -14,18 +14,60 @@
 <button (click)="saveTodo()">Add/Save</button> -->
 <!--  <button mat-flat-button (click)="saveTodo()" color="primary">Add/Save</button> -->
 
-<mat-form-field>
-    <mat-label for="input-title">Title</mat-label>
-    <input matInput placeholder="ex. Buy groceries" id="input-title" [(ngModel)]="newTodo.title">
-</mat-form-field>
-<mat-form-field>
-  <mat-label for="input-description">Description</mat-label>
-  <input matInput placeholder="ex. Go to the groceries shop" id="input-description" [(ngModel)]="newTodo.description">
-</mat-form-field>
-<mat-form-field>
-  <mat-label for="input-priority">Priority</mat-label>
-  <input matInput placeholder="ex. 1" type=number id="input-priority" [(ngModel)]="newTodo.priority">
-</mat-form-field>
-<mat-card-actions>
-<button mat-flat-button (click)="saveTodo()" color="primary">Add/Save</button>
-</mat-card-actions>
+  <!-- <mat-form-field>
+      <mat-label for="input-title">Title</mat-label>
+      <input matInput placeholder="ex. Buy groceries" id="input-title" [(ngModel)]="newTodo.title">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label for="input-description">Description</mat-label>
+    <input matInput placeholder="ex. Go to the groceries shop" id="input-description" [(ngModel)]="newTodo.description">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label for="input-priority">Priority</mat-label>
+    <input matInput placeholder="ex. 1" type=number id="input-priority" [(ngModel)]="newTodo.priority">
+  </mat-form-field>
+  <mat-card-actions>
+  <button mat-flat-button (click)="saveTodo()" color="primary">Add/Save</button>
+  </mat-card-actions> -->
+<div class="container">
+  <h1 mat-dialog-title>Add a ToDo</h1>
+  <div mat-dialog-content class="todo-dialog-content">
+    <!-- <div>
+      <label for="input-title">Insert Title</label>
+      <input id="input-title" type="text" [(ngModel)]="newTodo.title">
+    </div> -->
+    <mat-form-field>
+      <mat-label for="input-title">Title</mat-label>
+      <input matInput placeholder="ex. Buy groceries" id="input-title" [(ngModel)]="newTodo.title">
+  </mat-form-field>
+    <!-- <div>
+      <label for="input-description">Insert Description</label>
+      <input id="input-description" type="text" [(ngModel)]="newTodo.description">
+  </div> -->
+  <mat-form-field>
+    <mat-label for="input-description">Description</mat-label>
+    <input matInput placeholder="ex. Go to the groceries shop" id="input-description" [(ngModel)]="newTodo.description">
+  </mat-form-field>
+    <!-- <div>
+      <label for="input-priority">Insert Priority</label>
+      <input id="input-priority" type="number" [(ngModel)]="newTodo.priority">
+    </div> -->
+    <!-- <mat-form-field>
+      <mat-label for="input-priority">Priority</mat-label>
+      <input matInput placeholder="ex. 1" type=number id="input-priority" [(ngModel)]="newTodo.priority">
+    </mat-form-field> -->
+    <mat-form-field>
+    <mat-label>Priority</mat-label>
+      <mat-select [(ngModel)]="newTodo.priority">
+        <mat-option value="1">Low</mat-option>
+        <mat-option value="2">Mid</mat-option>
+        <mat-option value="3">High</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button (click)="saveTodo()" mat-button mat-dialog-close cdkFocusInitial color="primary">Save</button>
+  </div>
+</div>
+

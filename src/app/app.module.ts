@@ -9,6 +9,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
+import {MatIconModule} from '@angular/material/icon';
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { AppComponent } from './app.component';
 import { TodoAddComponent } from './components/todo-add/todo-add.component';
@@ -34,7 +36,10 @@ import { TodoListComponent } from './components/todo-list/todo-list.component';
     MatButtonModule,
     MatInputModule,
     MatFormFieldModule,
-    MatSelectModule
+    MatSelectModule,
+    MatIconModule,
+    MatDialogModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
